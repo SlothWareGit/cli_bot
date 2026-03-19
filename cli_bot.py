@@ -8,12 +8,15 @@ from commands.pswrd_gen import password_gen_command
 from commands.say import say_command
 from commands.sha256_hash_gen import hash_gen 
 
-import readline 
-from readline import set_completer, parse_and_bind
+try:
+    import readline 
+    from readline import set_completer, parse_and_bind
 
-readline.set_completer_delims(' \t\n;')
-set_completer(lambda text, state: [cmd for cmd in utils.COMMAND_LIST if cmd.startswith(text)][state] if state < len([cmd for cmd in utils.COMMAND_LIST if cmd.startswith(text)]) else None)
-parse_and_bind('tab: complete')
+    readline.set_completer_delims(' \t\n;')
+    set_completer(lambda text, state: [cmd for cmd in utils.COMMAND_LIST if cmd.startswith(text)][state] if state < len([cmd for cmd in utils.COMMAND_LIST if cmd.startswith(text)]) else None)
+    parse_and_bind('tab: complete')
+except ImportError:
+    pass
 
 def main():
     clear_screen()
