@@ -59,6 +59,8 @@ def main():
         elif command == "exit":
             exit_command()
         else:
+            clear_screen()
+            utils.welcome_message()
             print(f"{COLORS['RED']}Unknown command: {command}{COLORS['RESET']}")
 
 try:
