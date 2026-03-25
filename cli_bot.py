@@ -1,7 +1,8 @@
 import os
 import sys
-import utils 
+import utils
 from utils import COLORS, clear_screen
+from commands.github import link_github
 from commands.help import help_command
 from commands.exit import exit_command
 from commands.pswrd_gen import password_gen_command
@@ -15,6 +16,7 @@ try:
     readline.set_completer_delims(' \t\n;')
     set_completer(lambda text, state: [cmd for cmd in utils.COMMAND_LIST if cmd.startswith(text)][state] if state < len([cmd for cmd in utils.COMMAND_LIST if cmd.startswith(text)]) else None)
     parse_and_bind('tab: complete')
+
 except ImportError:
     pass
 
@@ -48,6 +50,10 @@ def main():
             clear_screen()
             utils.welcome_message()
             say_command()
+        elif command == "github":
+            clear_screen()
+            utils.welcome_message()
+            link_github()
         elif command == "refresh":
             os.execv(sys.executable, [sys.executable] + sys.argv)
         elif command == "exit":
