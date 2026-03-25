@@ -7,5 +7,6 @@ This is a simple CLI bot I want to continously work on as I learn python.
     "say": "makes the bot say something",
     "hash-gen": "generates a random or predetermined sha256 encryption",
     "refresh": "refreshes the program to apply code changes",
+    "github": "opens github repo in default browser",
     "pswrd-gen": "generates a random password with letters, digits, and special characters",
     "exit": "exits the program"
