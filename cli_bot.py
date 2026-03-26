@@ -8,6 +8,22 @@ from commands.exit import exit_command
 from commands.pswrd_gen import password_gen_command
 from commands.say import say_command
 from commands.sha256_hash_gen import hash_gen 
+from commands.socials import socials_command
+from commands.get_os import get_os
+import password
+from password import authenticate_user
+
+def password():
+    clear_screen()
+    authenticate_user()
+
+try:
+    password()
+except KeyboardInterrupt:
+    exit_command()
+if __name__ == "__password__":
+    password()
+
 
 try:
     import readline 
@@ -46,6 +62,10 @@ def main():
             clear_screen()
             utils.welcome_message()
             hash_gen()
+        elif command == "get-os":
+            clear_screen()
+            utils.welcome_message()
+            get_os()
         elif command == "say":
             clear_screen()
             utils.welcome_message()
@@ -54,6 +74,10 @@ def main():
             clear_screen()
             utils.welcome_message()
             link_github()
+        elif command == "socials":
+            clear_screen()
+            utils.welcome_message()
+            socials_command()
         elif command == "refresh":
             os.execv(sys.executable, [sys.executable] + sys.argv)
         elif command == "exit":
