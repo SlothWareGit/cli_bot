@@ -17,7 +17,9 @@ COMMAND_LIST: dict[str, str] = {
     "clear": "clears the console",
     "say": "makes the bot say something",
     "hash-gen": "generates a random or predetermined sha256 encryption",
+    "socials": "displays socials and their links",
     "github": "opens github repo in default browser",
+    "get-os": "displays your current os, version, and python version",
     "refresh": "refreshes the program",
     "pswrd-gen": "generates a random password",
     "exit": "exits the program"
