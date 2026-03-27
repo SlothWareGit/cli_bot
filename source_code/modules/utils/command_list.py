@@ -1,7 +1,6 @@
-# cli_bot
-This is a simple CLI bot I want to continously work on as I learn python.
+from typing import Dict
 
-## Commands
+COMMAND_LIST: Dict[str, Dict[str, str]] = {
     "General": {
         "help": "Shows this message",
         "clear": "Clears the console",
@@ -30,6 +29,3 @@ This is a simple CLI bot I want to continously work on as I learn python.
         "config init": "Creates config folders/files",
     }
 }
-
-### Notes
-- No notes right now...
