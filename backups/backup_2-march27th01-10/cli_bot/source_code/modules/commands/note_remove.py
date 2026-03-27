@@ -2,17 +2,17 @@ import json
 import os
 from modules.utils.colors import COLORS
 
-NOTES_FILE = "./modules/generated/notes.json"
+NOTES_FILE = "./generated/notes.json"
 
 def note_remove(*args):
     if not args:
-        print(f"{COLORS['YELLOW']}Usage: note remove <title>{COLORS['RESET']}")
+        print("{COLORS['YELLOW']}Usage: note remove <title>{COLORS['RESET']}")
         return
 
     title_to_remove = " ".join(args).strip().lower()
 
     if not os.path.exists(NOTES_FILE):
-        print(f"{COLORS['RED']}No notes found.{COLORS['RESET']}")
+        print("{COLORS['RED']}No notes found.{COLORS['RESET']}")
         return
 
     with open(NOTES_FILE, "r") as f:
