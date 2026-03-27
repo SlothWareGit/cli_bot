@@ -2,7 +2,7 @@ import os
 import json
 from modules.utils.command_list import COMMAND_LIST
 
-BASE_CONFIG_PATH = "./modules/generated/config"
+BASE_CONFIG_PATH = "../modules/generated/config"
 
 def create_global_config():
     path = os.path.join(BASE_CONFIG_PATH, "global.json")

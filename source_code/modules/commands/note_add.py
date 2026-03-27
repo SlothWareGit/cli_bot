@@ -2,7 +2,7 @@ import json
 import os
 from modules.utils.colors import COLORS
 
-NOTES_FILE = "./modules/generated/notes.json"
+NOTES_FILE = "./generated/notes.json"
 
 def note_add(*args):
     title = input("{COLORS['CYAN']}Title: {COLORS['RESET']}").strip()
